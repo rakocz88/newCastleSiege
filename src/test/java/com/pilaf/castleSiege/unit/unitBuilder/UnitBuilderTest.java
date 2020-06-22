@@ -41,10 +41,10 @@ public class UnitBuilderTest {
 
     @Test
     void calculateTimeToRecruit1Test(){
-        Weapon shortSword = WeaponStore.shortSword();
+        Weapon weapon = WeaponStore.TwoHandedAxe();
         Recruit recruit = RecruitStore.FolanPeasant();
         Armor armor = ArmorStore.lightLeatherArmor();
-        Unit result = unitBuilder.buildUnit("aaa", recruit, shortSword, WeaponStore.none(), armor);
+        Unit result = unitBuilder.buildUnit("aaa", recruit, weapon, WeaponStore.none(), armor);
         assertThat(result.getTimeToBuild()).isEqualTo(9);
     }
 
@@ -54,6 +54,33 @@ public class UnitBuilderTest {
         Recruit recruit = RecruitStore.FolanMilitia();
         Armor armor = ArmorStore.fullPlateArmor();
         Unit result = unitBuilder.buildUnit("aaa", recruit, shortSword, shortSword, armor);
-        assertThat(result.getCost()).isEqualTo(29);
+        assertThat(result.getTimeToBuild()).isEqualTo(15);
+    }
+
+    @Test
+    void calculateMinDmg(){
+        Weapon shortSword = WeaponStore.shortSword();
+        Recruit recruit = RecruitStore.FolanMilitia();
+        Armor armor = ArmorStore.fullPlateArmor();
+        Unit result = unitBuilder.buildUnit("aaa", recruit, shortSword, shortSword, armor);
+        assertThat(result.getMinDmg()).isEqualTo(4);
+    }
+
+    @Test
+    void calculateMaxDmg(){
+        Weapon shortSword = WeaponStore.shortSword();
+        Recruit recruit = RecruitStore.FolanMilitia();
+        Armor armor = ArmorStore.fullPlateArmor();
+        Unit result = unitBuilder.buildUnit("aaa", recruit, shortSword, shortSword, armor);
+        assertThat(result.getMaxDmg()).isEqualTo(6);
+    }
+
+    @Test
+    void calculateStaticDmg(){
+        Weapon shortSword = WeaponStore.shortSword();
+        Recruit recruit = RecruitStore.FolanMilitia();
+        Armor armor = ArmorStore.fullPlateArmor();
+        Unit result = unitBuilder.buildUnit("aaa", recruit, shortSword, shortSword, armor);
+        assertThat(result.getStaticDmg()).isEqualTo(8);
     }
 }
