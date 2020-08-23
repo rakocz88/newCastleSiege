@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>castleSiege</artifactId>
+        <groupId>com.pilaf</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ApiGateway</artifactId>
+
+   <!-- todo problem with versions- should not be declered here-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>CardCreator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>CardCreatorApi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>CardStore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>CardStoreApi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>Common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>GameSearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>GameSearchApi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>GameSearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>GameSearchApi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>Shop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>ShopApi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>SkillCreator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>SkillCreatorApi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>EffectCreatorApi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.pilaf</groupId>
+            <artifactId>EffectCreator</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>
